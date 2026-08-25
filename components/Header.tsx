@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Menu } from 'lucide-react'
 import React from "react";
 
 const Header = () => {
@@ -12,7 +13,7 @@ const Header = () => {
             className="w-14 rounded-full"
           />
         </div>
-        <nav>
+        <nav className="hidden md:block">
           <ul className="inline-flex bg-neve py-2 px-6 rounded-full items-center gap-4 font-medium lowercase text-secundaria">
             <li className="flex items-center bg-white px-2 rounded-full ">
               <Link href="">Casa</Link>
@@ -36,6 +37,9 @@ const Header = () => {
         </nav>
           <button className="flex items-center px-6 py-2 rounded-full bg-destaque text-base font-medium text-secundaria cursor-pointer">
             Contactar
+          </button>
+          <button className="md:hidden">
+            <Menu />
           </button>
       </div>
     </header>
