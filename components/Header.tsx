@@ -19,7 +19,7 @@ const Header = () => {
               <Link href="">Casa</Link>
             </li>
             <li className="flex items-center px-2 rounded-full transition-all duration-150 ease-in hover:bg-white ">
-              <Link href="">Quem somos</Link>
+              <Link href="#whoweare">Quem somos</Link>
             </li>
             <li className="flex items-center px-2 rounded-full transition-all duration-150 ease-in hover:bg-white ">
               <Link href="">MVV</Link>

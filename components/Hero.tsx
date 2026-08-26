@@ -3,8 +3,8 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <section className='flex flex-1 flex-col w-full px-4 rounded-md'>
-        <div className='rounded-2xl' id='container'>
+    <section className='flex flex-1 flex-col w-full px-4 pb-2  rounded-md'>
+        <div className='rounded-2xl rounded-b-2xl' id='container'>
             <div className='flex py-4 px-8 bg-linear-to-t from-secundaria'>
                 <div className='max-w-lg flex flex-col gap-4 '>
                     <h1 className='text-5xl font-medium text-neve'>Leve seus serviços para outro nível com a <span>seatrail</span></h1>

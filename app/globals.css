@@ -1,5 +1,8 @@
 @import "tailwindcss";
-
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 @theme {
     --color-principal: #00a0b4;
     --color-secundaria: #002f4a;
