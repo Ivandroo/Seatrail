@@ -23,7 +23,7 @@ const Word = ({ children, range, progress }: WordProps) => {
   return (
     <motion.span
       style={{ opacity, willChange: "opacity", transform: "translateZ(0)" }}
-      className="text-justify mr-3 inline-block"
+      className="text-secundaria font-medium mr-3 inline-block"
     >
       {children}
     </motion.span>
@@ -50,18 +50,19 @@ const Whoweare = () => {
 
   return (
     <section>
-      <div className="px-4">
-        <div className="flex flex-col gap-2">
-          <h1 className="text-xl text-secundaria font-bold mb-4 uppercase">
-            # Quem somos
+      <div className="px-4 sm:px-8 md:px-12">
+        <div className="flex flex-col ">
+          <h1 className="text-xl text-secundaria font-bold uppercase">
+            Quem somos
           </h1>
+          <span className="flex w-fit text-secundaria font-medium px-4 py-1 rounded-full border border-principal bg-principal/10 mb-4 text-[11px]"> Parceiro local de confiança offshore </span>
           <div
             style={{ minHeight: "100vh" }}
             className="flex flex-col gap-6 justify-start items-start text-center"
           >
             <h1
               ref={elementoRef}
-              className="text-4xl font-normal text-justify max-w-4xl md:text-5xl md:font-normal"
+              className="text-4xl text-justify max-w-4xl md:text-5xl"
             >
               {palavras.map((palavra, index) => {
                 const start = index / palavras.length;
