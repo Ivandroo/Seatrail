@@ -9,7 +9,7 @@ const Hero = () => {
                 <div className='max-w-lg flex flex-col gap-4 '>
                     <h1 className='text-5xl font-medium text-neve'>Leve seus serviços para outro nível com a <span>seatrail</span></h1>
                     <p className='text-base text-slate-300'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus quibusdam excepturi ipsam est minus dicta!</p>
-                    <button className='flex w-fit text-destaque justify-center items-center font-medium border rounded-full gap-2 py-2 px-6'>
+                    <button className='flex w-fit text-destaque justify-center items-center font-medium border gap-2 py-2 px-6'>
                         Saber mais
                         <ArrowBigRight />
                     </button>

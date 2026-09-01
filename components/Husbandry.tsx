@@ -17,14 +17,14 @@ const Husbandry = () => {
           {assistence.map((service) => (
             <div
               key={service.title}
-              className="flex flex-col justify-between border border-neve/10 p-2 rounded-md hover:shadow-neve/30 transition-all ease-in-out"
+              className="flex flex-col justify-between border border-neve/10 p-2 hover:shadow-neve/30 transition-all ease-in-out"
             >
               <div className="relative w-full min-h-52 mb-1">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  style={{ objectFit: "cover", borderRadius: "4px " }}
+                  style={{ objectFit: "cover" }}
                 />
               </div>
               <h3 className="text-xl text-neve font-medium">

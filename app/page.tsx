@@ -20,7 +20,7 @@ export default function Home() {
       <div id="servicos">
         <Services />
       </div>
-      <div className="flex flex-col w-full gap-8 justify-between sm:grid sm:grid-cols-2 md:grid-cols-3">
+      <div className="flex flex-col w-full gap-8 py-6 justify-between sm:grid sm:grid-cols-2 md:grid-cols-3">
         <Commitment />
         <Whyseatrail />
         <Focus />
