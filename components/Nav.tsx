@@ -34,7 +34,7 @@ export default function Nav() {
             </Link>
           ))}
           <Link
-            href="/contacto"
+            href="/contactos"
             className="border border-navy-950 bg-navy-950 px-4 py-2 text-sm font-semibold text-fog-50 transition-colors hover:bg-teal-600 hover:border-teal-600"
           >
             Pedir proposta
@@ -66,7 +66,7 @@ export default function Nav() {
             </Link>
           ))}
           <Link
-            href="/contacto"
+            href="/contactos"
             className="mt-4 border border-navy-950 bg-navy-950 px-4 py-2 text-center text-sm font-semibold text-fog-50"
             onClick={() => setOpen(false)}
           >
