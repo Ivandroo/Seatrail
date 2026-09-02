@@ -1,7 +1,8 @@
 import { Service } from "@/lib/lib";
+import { Assistence } from "@/lib/lib";
 import Link from "next/link";
 
-function ServiceCard({ service }: { service: Service }) {
+function ServiceCard({ service }: { service: Service | Assistence }) {
   return (
     <Link
       href={`/servicos/${service.slug}`}

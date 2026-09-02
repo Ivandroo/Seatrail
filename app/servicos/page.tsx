@@ -31,8 +31,8 @@ function page() {
       <section className="border-t border-[var(--line)] bg-white">
         <div className="mx-auto max-w-6xl px-6 py-10">
           <SectionHeading
-            subtitle="Setores que apoiamos"
-            title="Suporte flexível ao longo de toda a cadeia de valor offshore."
+            subtitle="Assistência e apoio portuário"
+            title="Conectando pessoas qualificadas com oportunidades"
           />
         </div>
         <div className="mx-auto max-w-6xl px-6 pb-8">

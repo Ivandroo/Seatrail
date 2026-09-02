@@ -91,8 +91,8 @@ export default function Home() {
             </Link>
           </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {assistence.slice(0, 4).map((service) => (
-              <ServiceCard key={service.slug} service={service} />
+            {assistence.slice(0, 4).map((assistence) => (
+              <ServiceCard key={assistence.slug} service={assistence} />
             ))}
           </div>
         </div>
@@ -126,7 +126,7 @@ export default function Home() {
             </p>
           </div>
           <Link
-            href="/contacto"
+            href="/contactos"
             className="whitespace-nowrap border border-amber-500 bg-amber-500 px-7 py-3.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-transparent hover:text-amber-500"
           >
             Pedir uma proposta
