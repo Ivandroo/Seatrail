@@ -1,53 +1,5 @@
 import type { Service } from "@/lib/lib"
 
-export const CoreServices: Service[] = [
-  {
-    code: "CSV-01",
-    slug: "Agenciamento-e-suporte-portuário",
-    title: "Agenciamento e suporte portuário",
-    tagline: "",
-    bullets: [
-      "Agenciamento e suporte portuário",
-    ]
-  },
-  {
-    code: "c",
-    slug: "v",
-    title: "",
-    tagline: "",
-    bullets: [
-      "Agenciamento e suporte portuário",
-    ]
-  },
-  {
-    code: "c",
-    slug: "v",
-    title: "",
-    tagline: "",
-    bullets: [
-      "Agenciamento e suporte portuário",
-    ]
-  },
-  {
-    code: "c",
-    slug: "v",
-    title: "",
-    tagline: "",
-    bullets: [
-      "Agenciamento e suporte portuário",
-    ]
-  },
-  {
-    code: "c",
-    slug: "v",
-    title: "",
-    tagline: "",
-    bullets: [
-      "Agenciamento e suporte portuário",
-    ]
-  },
-]
-
 export const services: Service[] = [
   {
     code: "SVC-01",

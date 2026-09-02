@@ -24,7 +24,7 @@ const Word = ({ children, range, progress }: WordProps) => {
   return (
     <motion.span
       style={{ opacity, willChange: "opacity", transform: "translateZ(0)" }}
-      className="text-secundaria font-medium mr-3 inline-block"
+      className=" text-4xl font-light leading-tight md:text-5xl mr-3 inline-block"
     >
       {children}
     </motion.span>
@@ -51,18 +51,18 @@ const Whoweare = () => {
 
   return (
     <section>
-      <div className="px-4 sm:px-8 md:px-12">
-        <div className="flex flex-col ">
+      <div>
+        <div className="flex flex-col">
           
-          <SectionHeading title="" subtitle="Quem somos" />
 
           <div
-            style={{ minHeight: "100vh" }}
-            className="flex flex-col gap-6 justify-start items-start text-center"
+            style={{ minHeight: "50vh" }}
+            className="flex flex-col gap-6 px-4 sm:px-8 md:px-12 justify-start items-start"
           >
+            <SectionHeading title="" subtitle="Quem somos" />
             <h1
               ref={elementoRef}
-              className="text-4xl text-justify max-w-4xl md:text-5xl"
+              className="text-4xl max-w-4xl md:text-5xl"
             >
               {palavras.map((palavra, index) => {
                 const start = index / palavras.length;
@@ -78,45 +78,33 @@ const Whoweare = () => {
                 );
               })}
             </h1>
-            <div className="flex flex-col w-full justify-center items-center gap-10  py-3 px-6 rounded-md sm:max-w-fit sm:grid sm:grid-cols-2 sm:justify-start md:grid md:grid-cols-3 mt-4">
-              <div className="flex flex-col gap-1 items-center sm:items-start">
-                <h1 className="text-4xl text-secundaria font-bold">
-                  2+{" "}
-                  <span className="opacity-30 text-2xl font-medium uppercase">
-                    Anos
-                  </span>
-                </h1>
-                <p className="font-light text-sm">Anos de experiência</p>
-              </div>
-              <div className="flex flex-col gap-1 items-start">
-                <h1 className="text-4xl text-destaque font-bold">
-                  5+{" "}
-                  <span className="text-2xl opacity-30 font-medium uppercase">
-                    col
-                  </span>
-                </h1>
-                <p className="font-light text-sm">Colaboradores no ramo</p>
-              </div>
-              <div className="flex flex-col gap-1 items-start">
-                <h1 className="text-4xl text-principal font-bold">
-                  10+{" "}
-                  <span className="text-2xl opacity-30 font-medium uppercase">
-                    con
-                  </span>
-                </h1>
-                <p className="font-light text-sm">Conexões internacionais</p>
-              </div>
-            </div>
-            <div className="flex flex-col w-full gap-4 sm:grid sm:grid-cols-2 ">
-              <img src="/Naviocargueiro.png" alt="" className="opacity-60" />
-              <div className="text-justify ">
-                <p className="text-base">
-                  Parte do Global Digital Marketeiro Group, a SEATRAIL combina conhecimento do mercado local com uma mentalidade de serviço internacional. Damos suporte aos clientes em todo o ciclo operacional — desde a mobilização de pessoal e trocas de tripulação até o suporte a embarcações, portos e bases em terra.
-                </p>
-                <button className="flex items-center gap-2 mt-4 py-2 px-6 border font-medium cursor-pointer"> Contactar Agora <Phone size={18}/></button>
-              </div>
-            </div>
           </div>
+            {/* Quem somos / Missão */}
+            <section className="border-b border-[var(--line)] bg-white">
+              <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:gap-16">
+                <SectionHeading
+                  subtitle=""
+                  title="Um parceiro local de confiança para operações offshore."
+                  lede="A SEATRAIL Offshore Support Services é uma empresa angolana que presta apoio operacional, logístico e de mão de obra integrado às indústrias offshore e marítima."
+                />
+                <div className="border-t border-[var(--line)] pt-8 md:border-l md:border-t-0 md:pl-16 md:pt-0">
+                  <p className="text-xs font-semibold text-teal-600">Missão</p>
+                  <p className="mt-3 text-base text-navy-900/75">
+                    Prestar serviços de apoio fiáveis, responsivos e eficientes
+                    em custo, para que os nossos clientes se concentrem nas suas
+                    operações offshore essenciais.
+                  </p>
+                  <p className="mt-6 text-xs font-semibold text-teal-600">
+                    Visão
+                  </p>
+                  <p className="mt-3 text-base text-navy-900/75">
+                    Tornar-se uma plataforma de referência em apoio offshore em
+                    Angola e África Ocidental, reconhecida pela fiabilidade,
+                    agilidade, conformidade e qualidade de serviço.
+                  </p>
+                </div>
+              </div>
+            </section>
         </div>
       </div>
     </section>
