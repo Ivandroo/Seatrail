@@ -1,3 +1,26 @@
+import type { Service } from "@/lib/lib"
+
+export const CoreServices: Service[] = [
+  {
+    code: "c",
+    slug: "v",
+    title: "",
+    tagline: "",
+    bullets: [
+      "Agenciamento e suporte portuário",
+    ]
+  }
+]
+
+export const sectors = [
+  "Petróleo & Gás",
+  "Operações Subaquáticas & ROV",
+  "Construção Offshore",
+  "Operações Marítimas & Embarcações",
+  "Levantamento & Serviços Geofísicos",
+  "Logística Offshore",
+  "Energia Offshore Renovável & Emergente",
+];
 
 export const services = [
   {

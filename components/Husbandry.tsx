@@ -8,13 +8,9 @@ const Husbandry = () => {
   return (
     <section>
       <div className="bg-secundaria px-4 py-8 sm:px-8 md:px-12">
-        <h1 className="text-xl text-neve font-bold uppercase">
-          ASSISTÊNCIA À EMBARCAÇÃO E APOIO PORTUÁRIO
-        </h1>
-        <span className="flex w-fit text-neve font-medium px-4 py-1 rounded-full border border-principal bg-neve/20 mb-6 text-[11px]">
-          Conectando pessoas qualificadas com oportunidades
-        </span>
         
+        <SectionHeading title="Conectando pessoas qualificadas com oportunidades" subtitle="Assistência e apoio portuario" invert />
+
         <div className="flex flex-col w-full gap-8 justify-between sm:grid sm:grid-cols-2 md:grid-cols-3">
           {assistence.map((service) => (
             <div
