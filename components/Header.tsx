@@ -13,31 +13,24 @@ const Header = () => {
             className="w-10 rounded-full"
           />
         </div>
-        <nav className="hidden md:block">
+        <nav className="hidden md:flex items-center gap-4">
           <ul className="inline-flex py-2 px-6 items-center gap-4 font-medium lowercase text-secundaria">
             <li className="flex items-center px-2 transition-all duration-150 ease-in hover:translate-y-[-2px] ">
-              <Link href="">Casa</Link>
+              <Link href="/">Casa</Link>
             </li>
+            
             <li className="flex items-center px-2 transition-all duration-150 ease-in hover:translate-y-[-2px] ">
-              <Link href="#whoweare">Quem somos</Link>
+              <Link href="/servicos">Serviços</Link>
             </li>
+            
             <li className="flex items-center px-2 transition-all duration-150 ease-in hover:translate-y-[-2px] ">
-              <Link href="">MVV</Link>
-            </li>
-            <li className="flex items-center px-2 transition-all duration-150 ease-in hover:translate-y-[-2px] ">
-              <Link href="">Serviços</Link>
-            </li>
-            <li className="flex items-center px-2 transition-all duration-150 ease-in hover:translate-y-[-2px] ">
-              <Link href="">Sectores</Link>
-            </li>
-            <li className="flex items-center px-2 transition-all duration-150 ease-in hover:translate-y-[-2px] ">
-              <Link href="">Contacto</Link>
+              <Link href="/contactos">Contacto</Link>
             </li>
           </ul>
-        </nav>
           <button className="flex items-center px-6 py-1 bg-destaque text-base font-semibold text-secundaria cursor-pointer">
             Contactar
           </button>
+        </nav>
           <button className="md:hidden">
             <Menu />
           </button>

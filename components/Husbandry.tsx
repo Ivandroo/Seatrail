@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { services } from "@/data/services";
 import { assistence } from "@/data/assistence";
+import SectionHeading from "./SectionHeading";
 
 const Husbandry = () => {
   return (
@@ -13,6 +14,7 @@ const Husbandry = () => {
         <span className="flex w-fit text-neve font-medium px-4 py-1 rounded-full border border-principal bg-neve/20 mb-6 text-[11px]">
           Conectando pessoas qualificadas com oportunidades
         </span>
+        
         <div className="flex flex-col w-full gap-8 justify-between sm:grid sm:grid-cols-2 md:grid-cols-3">
           {assistence.map((service) => (
             <div

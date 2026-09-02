@@ -8,6 +8,7 @@ import {
   useSpring,
 } from "framer-motion";
 import { Phone } from "lucide-react";
+import SectionHeading from "./SectionHeading";
 
 interface WordProps {
   children: string;
@@ -52,10 +53,9 @@ const Whoweare = () => {
     <section>
       <div className="px-4 sm:px-8 md:px-12">
         <div className="flex flex-col ">
-          <h1 className="text-xl text-secundaria font-bold uppercase">
-            Quem somos
-          </h1>
-          <span className="flex w-fit text-secundaria font-medium px-4 py-1 rounded-full border border-principal bg-principal/10 mb-4 text-[11px]"> Parceiro local de confiança offshore </span>
+          
+          <SectionHeading title="" subtitle="Quem somos" />
+          
           <div
             style={{ minHeight: "100vh" }}
             className="flex flex-col gap-6 justify-start items-start text-center"
