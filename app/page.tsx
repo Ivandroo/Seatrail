@@ -2,12 +2,13 @@ import Commitment from "@/components/Commitment";
 import Focus from "@/components/Focus";
 import Hero from "@/components/Hero";
 import Husbandry from "@/components/Husbandry";
-import Services from "@/components/Services";
 import Whoweare from "@/components/Whoweare";
 import Whyseatrail from "@/components/Whyseatrail";
 
 import SectionHeading from "@/components/SectionHeading";
-import { sectors } from "@/data/services";
+import { sectors, CoreServices, services } from "@/data/services";
+import Link from "next/dist/client/link";
+import ServiceCard from "@/components/ServiceCard";
 
 
 export default function Home() {
@@ -19,9 +20,26 @@ export default function Home() {
       <div id="whoweare">
         <Whoweare />
       </div>
-      <div id="servicos">
-        <Services />
-      </div>
+
+      <section className="bg-fog-50">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <SectionHeading title="Suporte integrado sob um único parceiro de confiança." subtitle="Serviços principais" />
+            <Link
+              href="/servicos"
+              className="border border-navy-950 px-5 py-2.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-navy-950 hover:text-fog-50"
+            >
+              Ver os 8 serviços
+            </Link>
+          </div>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {services.slice(0, 4).map((service) => (
+              <ServiceCard key={service.slug} service={service} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <div className="flex flex-col w-full gap-8 py-6 justify-between sm:grid sm:grid-cols-2 md:grid-cols-3">
         <Commitment />
         <Whyseatrail />
