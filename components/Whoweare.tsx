@@ -54,10 +54,9 @@ const Whoweare = () => {
       <div>
         <div className="flex flex-col">
           
-
           <div
             style={{ minHeight: "50vh" }}
-            className="flex flex-col gap-6 px-4 sm:px-8 md:px-12 justify-start items-start"
+            className="flex flex-col px-4 py-6 sm:px-8 md:px-12 justify-start items-start"
           >
             <SectionHeading title="" subtitle="Quem somos" />
             <h1

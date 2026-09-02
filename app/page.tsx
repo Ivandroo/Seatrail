@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import Whoweare from "@/components/Whoweare";
 
 import SectionHeading from "@/components/SectionHeading";
-import { sectors, services, whySeatrail } from "@/data/services";
+import { commitments, sectors, services, whySeatrail } from "@/data/services";
 import Link from "next/dist/client/link";
 import ServiceCard from "@/components/ServiceCard";
 import { assistence } from "@/data/assistence";
@@ -12,7 +12,7 @@ import { assistence } from "@/data/assistence";
 export default function Home() {
   return (
     <main className="flex flex-col gap-8">
-      <div className="flex min-h-dvh flex-col mb-4">
+      <div className="flex min-h-dvh flex-col">
         <Hero />
       </div>
       <div id="whoweare">
@@ -39,7 +39,7 @@ export default function Home() {
       </section>
 
       {/* Setores */}
-      <section className="border-y border-[var(--line-invert)] bg-secundaria text-fog-50">
+      <section className="border-y border-[var(--line-invert)] bg-navy-950 text-fog-50">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionHeading
             subtitle="Setores que apoiamos"
@@ -79,8 +79,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <div className="mx-auto max-w-6xl px-6 mb-10">
+      <section className="border-y border-[var(--line)] bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-10 mb-10">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <SectionHeading title="Conectando pessoas qualificadas com oportunidades" subtitle="Assistência e apoio portuário" />
             <Link
@@ -95,6 +95,42 @@ export default function Home() {
               <ServiceCard key={service.slug} service={service} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Compromisso */}
+      <section className="border-t border-[var(--line)] bg-fog-50">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <SectionHeading subtitle="O nosso compromisso" title="Os padrões por trás de cada missão." />
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+            {commitments.map((c) => (
+              <div key={c.title} className="border-l-2 border-amber-500 bg-white p-5">
+                <p className="font-display text-base font-bold text-navy-950">{c.title}</p>
+                <p className="mt-2 text-sm text-navy-900/65">{c.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA final */}
+      <section className="bg-navy-950 text-fog-50">
+        <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-6 py-24 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-xl">
+            <h2 className="font-display text-3xl font-bold md:text-4xl">
+              Vamos apoiar a sua próxima operação.
+            </h2>
+            <p className="mt-4 text-fog-100/75">
+              Pessoas fiáveis. Coordenação fiável. Apoio offshore fiável. Fale
+              connosco sobre os requisitos operacionais do seu projeto.
+            </p>
+          </div>
+          <Link
+            href="/contacto"
+            className="whitespace-nowrap border border-amber-500 bg-amber-500 px-7 py-3.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-transparent hover:text-amber-500"
+          >
+            Pedir uma proposta
+          </Link>
         </div>
       </section>
     </main>

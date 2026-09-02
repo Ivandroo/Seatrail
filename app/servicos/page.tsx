@@ -1,33 +1,49 @@
 import React from "react";
-import { services } from "@/data/services";
-import Image from "next/image";
+import { sectors, services } from "@/data/services";
+import { assistence } from "@/data/assistence";
+import SectionHeading from "@/components/SectionHeading";
+import ServiceCard from "@/components/ServiceCard";
 
 function page() {
   return (
-    <section>
-      <div className="px-4 sm:px-8 md:px-12">
-        <span className="flex w-fit text-secundaria font-medium text-base ">
-          Nossos serviços{" "}
-        </span>
-        <h1 className="text-3xl text-secundaria font-bold uppercase">
-          {" "}
-          Suporte integrado com um parceiro confiável
-        </h1>
-        <div className="flex flex-col w-full gap-8 justify-between sm:grid sm:grid-cols-2 md:grid-cols-3">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="flex flex-col justify-between shadow p-2 hover:shadow-secundaria/30 transition-all ease-in-out"
-            >
-              
-              <h3 className="text-xl text-secundaria font-medium">
-                {service.title}
-              </h3>
-            </div>
-          ))}
+    <>
+      <section className="border-b border-[var(--line-invert)] bg-navy-950 text-fog-50">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <SectionHeading
+            invert
+            subtitle="Serviços"
+            title="Suporte integrado sob um único parceiro de confiança."
+            lede="Da chegada ao porto ao regresso a casa da tripulação, cobrimos cada etapa do ciclo operacional offshore. Escolha um serviço para ver o detalhe."
+          />
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="bg-fog-50">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((s) => (
+              <ServiceCard key={s.slug} service={s} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-[var(--line)] bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-10">
+          <SectionHeading
+            subtitle="Setores que apoiamos"
+            title="Suporte flexível ao longo de toda a cadeia de valor offshore."
+          />
+        </div>
+        <div className="mx-auto max-w-6xl px-6 pb-8">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {assistence.map((service) => (
+              <ServiceCard key={service.slug} service={service} />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 
