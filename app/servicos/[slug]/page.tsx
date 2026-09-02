@@ -81,7 +81,7 @@ export default async function ServiceDetail({
               Ocidental.
             </p>
             <Link
-              href="/contacto"
+              href="/contactos"
               className="mt-6 inline-flex w-full justify-center border border-navy-950 bg-navy-950 px-5 py-3 text-sm font-semibold text-fog-50 transition-colors hover:bg-teal-600 hover:border-teal-600"
             >
               Pedir uma proposta
