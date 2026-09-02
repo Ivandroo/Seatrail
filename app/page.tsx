@@ -40,11 +40,6 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="flex flex-col w-full gap-8 py-6 justify-between sm:grid sm:grid-cols-2 md:grid-cols-3">
-        <Commitment />
-        <Whyseatrail />
-        <Focus />
-      </div>
       <div id="husbandry">
         <Husbandry />
       </div>
