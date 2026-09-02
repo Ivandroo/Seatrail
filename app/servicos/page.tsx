@@ -1,6 +1,5 @@
 import React from "react";
-import { sectors, services } from "@/data/services";
-import { assistence } from "@/data/assistence";
+import { services } from "@/data/services";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
 
@@ -23,22 +22,6 @@ function page() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
               <ServiceCard key={s.slug} service={s} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="border-t border-[var(--line)] bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-10">
-          <SectionHeading
-            subtitle="Assistência e apoio portuário"
-            title="Conectando pessoas qualificadas com oportunidades"
-          />
-        </div>
-        <div className="mx-auto max-w-6xl px-6 pb-8">
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {assistence.map((service) => (
-              <ServiceCard key={service.slug} service={service} />
             ))}
           </div>
         </div>

@@ -3,9 +3,14 @@ import { Assistence } from "@/lib/lib";
 import Link from "next/link";
 
 function ServiceCard({ service }: { service: Service | Assistence }) {
+  const href =
+    "bullets" in service
+      ? `/servicos/${service.slug}`
+      : `/assistencias/${service.slug}`;
+
   return (
     <Link
-      href={`/servicos/${service.slug}`}
+      href={href}
       className="bracket-frame group flex flex-col justify-between border border-[var(--line)] bg-white p-6 transition-colors hover:border-teal-500"
     >
       <div>

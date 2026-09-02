@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ServiceCard from "@/components/ServiceCard";
-import { services } from "@/data/services";
+import { assistence } from "@/data/assistence";
 
 export function generateStaticParams() {
-  return services.map((s) => ({ slug: s.slug }));
+  return assistence.map((service) => ({ slug: service.slug }));
 }
 
 export async function generateMetadata({
@@ -14,33 +14,34 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const service = services.find((s) => s.slug === slug);
+  const service = assistence.find((item) => item.slug === slug);
   if (!service) return {};
+
   return {
     title: `${service.title} | SEATRAIL`,
     description: service.tagline,
   };
 }
 
-export default async function ServiceDetail({
+export default async function AssistenciaDetail({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const index = services.findIndex((s) => s.slug === slug);
+  const index = assistence.findIndex((service) => service.slug === slug);
   if (index === -1) return notFound();
 
-  const service = services[index];
-  const next = services[(index + 1) % services.length];
+  const service = assistence[index];
+  const next = assistence[(index + 1) % assistence.length];
 
   return (
     <>
       <section className="border-b border-[var(--line-invert)] bg-navy-950 text-fog-50">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <nav className="text-xs text-fog-100/60">
-            <Link href="/servicos" className="hover:text-teal-300">
-              Serviços
+            <Link href="/assistencias" className="hover:text-teal-300">
+              Assistência e apoio portuário
             </Link>
             <span className="mx-2">/</span>
             <span className="text-fog-100/80">{service.title}</span>
@@ -60,25 +61,17 @@ export default async function ServiceDetail({
       <section className="bg-white">
         <div className="mx-auto grid max-w-6xl gap-16 px-6 py-20 md:grid-cols-[1.4fr_1fr]">
           <div>
-            <p className="text-xs font-semibold text-teal-600">O que inclui</p>
-            <ul className="mt-6 divide-y divide-[var(--line)] border-t border-[var(--line)]">
-              {("bullets" in service ? service.bullets : []).map((b) => (
-                <li key={b} className="flex gap-4 py-4">
-                  <span
-                    aria-hidden="true"
-                    className="mt-2 h-1.5 w-1.5 shrink-0 bg-amber-500"
-                  />
-                  <span className="text-sm text-navy-900/80 md:text-base">
-                    {b}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <p className="text-xs font-semibold text-teal-600">Como apoiamos</p>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-navy-900/80">
+              Coordenamos esta etapa da operação com uma equipa local,
+              comunicação clara e acompanhamento próximo das necessidades da
+              embarcação.
+            </p>
           </div>
 
           <aside className="h-fit border border-[var(--line)] bg-fog-50 p-7">
             <p className="font-display text-lg font-bold text-navy-950">
-              Precisa deste serviço?
+              Precisa deste apoio?
             </p>
             <p className="mt-3 text-sm text-navy-900/70">
               Conte-nos os requisitos da sua operação e a nossa equipa prepara
@@ -87,7 +80,7 @@ export default async function ServiceDetail({
             </p>
             <Link
               href="/contactos"
-              className="mt-6 inline-flex w-full justify-center border border-navy-950 bg-navy-950 px-5 py-3 text-sm font-semibold text-fog-50 transition-colors hover:bg-teal-600 hover:border-teal-600"
+              className="mt-6 inline-flex w-full justify-center border border-navy-950 bg-navy-950 px-5 py-3 text-sm font-semibold text-fog-50 transition-colors hover:border-teal-600 hover:bg-teal-600"
             >
               Pedir uma proposta
             </Link>
@@ -99,13 +92,13 @@ export default async function ServiceDetail({
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="flex items-end justify-between gap-6">
             <p className="text-xs font-semibold text-teal-600">
-              Próximo serviço
+              Próxima assistência
             </p>
             <Link
-              href="/servicos"
+              href="/assistencias"
               className="text-sm font-semibold text-navy-950 hover:text-teal-600"
             >
-              Ver todos →
+              Ver todas →
             </Link>
           </div>
           <div className="mt-6 max-w-sm">
