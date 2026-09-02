@@ -1,12 +1,10 @@
 import Commitment from "@/components/Commitment";
 import Focus from "@/components/Focus";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Husbandry from "@/components/Husbandry";
 import Services from "@/components/Services";
 import Whoweare from "@/components/Whoweare";
 import Whyseatrail from "@/components/Whyseatrail";
-import Image from "next/image";
 
 export default function Home() {
   return (
