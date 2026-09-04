@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className='flex flex-1 flex-col w-full '>
         <div id='container'>
-            <div className='flex py-4 px-2 sm:px-6 md:px-8 bg-linear-to-t from-secundaria'>
+            <div className='flex py-4 px-2 md:max-w-6xl sm:px-6 md:px-8 bg-linear-to-t from-secundaria'>
                 <div className='max-w-lg flex flex-col gap-4 '>
                     <h1 className=' text-5xl font-medium text-neve'>Transforme suas expectativas em resultados com ajuda da <span className='text-principal font-bold'>seatrail</span></h1>
                     <p className='text-base text-slate-300'>A seatrail é uma empresa especializada em fornecer soluções de transporte e logística para o setor offshore, com foco em segurança, eficiência e qualidade.</p>

@@ -33,7 +33,7 @@ export default function Contacto() {
             </p>
 
             <p className="mt-8 text-xs font-semibold text-teal-600">Email</p>
-            <p className="mt-3 text-sm text-navy-900/75">operacoes@seatrail.co.ao</p>
+            <p className="mt-3 text-sm text-navy-900/75">geral.seatrail@gdmao.com</p>
 
             <p className="mt-8 text-xs font-semibold text-teal-600">Tempo de resposta</p>
             <p className="mt-3 text-sm text-navy-900/75">
