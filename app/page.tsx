@@ -9,7 +9,7 @@ import { assistence } from "@/data/assistence";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-8">
+    <main className="flex flex-col">
       <div className="flex min-h-dvh flex-col">
         <Hero />
       </div>

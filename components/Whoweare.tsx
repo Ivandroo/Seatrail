@@ -51,32 +51,34 @@ const Whoweare = () => {
 
   return (
     <section>
-      <div>
         <div className="flex flex-col">
           
           <div
             style={{ minHeight: "50vh" }}
-            className="flex flex-col px-4 py-6 sm:px-8 md:px-12 justify-start items-start"
+            className="flex flex-col px-6 py-6 sm:px-8 md:px-12 justify-start items-start"
           >
-            <SectionHeading title="" subtitle="Quem somos" />
-            <h1
-              ref={elementoRef}
-              className="text-4xl max-w-4xl md:text-5xl"
-            >
-              {palavras.map((palavra, index) => {
-                const start = index / palavras.length;
-                const end = start + 1 / palavras.length;
-                return (
-                  <Word
-                    key={index}
-                    range={[start, end]}
-                    progress={smoothProgress}
-                  >
-                    {palavra}
-                  </Word>
-                );
-              })}
-            </h1>
+            <div className='sm:w-6xl sm:mx-auto sm:px-6'>
+
+              <SectionHeading title="" subtitle="Quem somos" />
+              <h1
+                ref={elementoRef}
+                className="text-4xl max-w-4xl md:text-5xl"
+              >
+                {palavras.map((palavra, index) => {
+                  const start = index / palavras.length;
+                  const end = start + 1 / palavras.length;
+                  return (
+                    <Word
+                      key={index}
+                      range={[start, end]}
+                      progress={smoothProgress}
+                    >
+                      {palavra}
+                    </Word>
+                  );
+                })}
+              </h1>
+            </div>
           </div>
             {/* Quem somos / Missão */}
             <section className="border-b border-[var(--line)] bg-white">
@@ -104,7 +106,6 @@ const Whoweare = () => {
                 </div>
               </div>
             </section>
-        </div>
       </div>
     </section>
   );
